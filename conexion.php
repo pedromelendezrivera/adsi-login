@@ -2,8 +2,11 @@
 
 	class Db{
 		private static $dsn = 'mysql:host=localhost;dbname=baselogin';
+//		private static $dsn = 'mysql:host=fdb22.awardspace.net;dbname=3182254_baselogin';
         private static $usuario = 'root'; 
+//        private static $usuario = '3182254_baselogin'; 
         private static $contraseña = '';
+//        private static $contraseña = 'sena1234';
 		private static $conexion = null;
 
 		private function __construct(){}
