@@ -1,6 +1,6 @@
 <?php 
-    require_once  'error_reporting.php';
 	session_start();
+    require_once  'error_reporting.php';
 	unset($_SESSION['usuario']);
 ?>
 <!DOCTYPE html>

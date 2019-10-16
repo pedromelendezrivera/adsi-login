@@ -1,10 +1,9 @@
 <?php
+	//inicio de sesion
+	session_start();
     require_once('conexion.php');
 	require_once('usuario.php');
 	require_once('crud_usuario.php');
-
-	//inicio de sesion
-	session_start();
 
 	$usuario=new Usuario();
 	$crud=new CrudUsuario();
@@ -26,9 +25,9 @@
 		// si el id del objeto retornado no es null, quiere decir que encontro un registro en la base
 		if ($usuario->getId()!=NULL) {
 			$_SESSION['usuario']=$usuario; //si el usuario se encuentra, crea la sesión de usuario
-			header('Location: cuenta.php'); //envia a la página que simula la cuenta
+			header('Location:cuenta.php'); //envia a la página que simula la cuenta
 		}else{
-			header('Location: error.php?mensaje=Tus nombre de usuario o clave son incorrectos');
+			header('Location:error.php?mensaje=Tus nombre de usuario o clave son incorrectos');
 			// cuando los datos son incorrectos envia a la página de error
 		}
 	}elseif(isset($_POST['salir'])){ // cuando presiona el botòn salir
